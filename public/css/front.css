@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0 0 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.main_space {
+  padding: 135px 0 10px 0;
+}
+
+.index_title {
+  padding: 15px 0;
+}
+
+.detail_title {
+  padding: 15px 0 0 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+
+.top-left {
+  position: absolute;
+  left: 170px;
+  top: 30px;
+}
+
+.content {
+  text-align: center;
+}
+
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.top_picture {
+  position: relative;
+}
+
+.top_picture div {
+  position: absolute;
+  top: 13%;
+  left: 26%;
+  right: 26%;
+  bottom: 57%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.top_picture h1 {
+  color: black;
+  font-size: 2.7vw;
+  font-weight: bold;
+  font-family: Quicksand, sans-serif;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 0;
+}
+
+.top_picture img {
+  width: 100%;
+}
+
+.top_picture p {
+  color: black;
+  font-size: 1.7vw;
+  font-family: Quicksand, sans-serif;
+}
+
+.btn-square-so-pop {
+  display: inline-block;
+  padding: 0.2em 1.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #ffad60;
+  /*色*/
+  border-radius: 4px;
+  /*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  border: solid 2px #d27d00;
+  /*線色*/
+  font-size: 1.3vw;
+  position: absolute;
+  top: 71%;
+  left: 42%;
+}
+
+.btn-square-so-pop:active {
+  /*押したとき*/
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.under {
+  background: linear-gradient(transparent 70%, #fa8072 70%);
+}
+
+.box1 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 3px #dcdcdc;
+}
+
+.box1 p {
+  margin: 0;
+  padding: 0;
+}
+
+.detail h2 {
+  margin: 1em 0 1em 0;
+}
+
+.detail_table {
+  border-collapse: collapse;
+  font-size: 1vw;
+}
+
+.detail_table th,
+.detail_table td {
+  border: solid 1px black;
+}
+
+.detail_table th {
+  padding: 1em 1em 1em 1em;
+}
+
+.detail_table td {
+  padding: 1em 1em 1em 1em;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+}
+
