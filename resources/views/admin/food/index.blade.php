@@ -36,7 +36,7 @@
                         <tbody>
                             @foreach($posts as $food)
                                 <tr>
-                                    <th><img src="{{ asset('storage/image/' . $food->image_path) }}" height="280px"></th>
+                                    <th><img src="{{ $food->image_path }}" height="280px"></th>
                                     <td>◇店名◇<br>{{ \Str::limit($food->shopname, 100) }}<br><br>◇住所◇<br>{{ \Str::limit($food->address, 100) }}</td>
                                     <td>{{ \Str::limit($food->comment, 250) }}</td>
                                     <td>

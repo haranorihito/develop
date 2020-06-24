@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-8 mx-auto create_title">
                 <h2>店舗の新規作成</h2>
                 <form action="{{ action('Admin\FoodController@create') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Food;
+use Storage;
 
 class FoodController extends Controller
 {
@@ -19,8 +20,8 @@ class FoodController extends Controller
         $form = $request->all();
         
         if (isset($form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $food->image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $food->image_path = Storage::disk('s3')->url($path);
         } else {
             $food->image_path = null;
         }
@@ -93,8 +94,8 @@ class FoodController extends Controller
         $food = Food::find($request->id);
         $news_form = $request->all();
         if (isset($food_form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $food->image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $food->image_path = Storage::disk('s3')->url($path);
             unset($food_form['image']);
          } elseif (isset($request->remove)) {
             $food->image_path = null;

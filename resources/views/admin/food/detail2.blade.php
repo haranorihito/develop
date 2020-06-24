@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="row top_img">    
-            <img src="{{ asset('storage/image/' . $food->image_path) }}" width="60%" height="60%">
+            <img src="{{ $food->image_path }}" width="60%" height="60%">
         </div>
         <div class="row detail">
             <h2>店舗情報</h2>
@@ -39,7 +39,7 @@
                     <th>MAP</th>
                     <td>
                         @if ($food->map != NULL)
-                            <iframe src="{{ url($food->map, 200) }}" width="550" height="220" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            <iframe src="https://maps.google.co.jp/maps?output=embed&q={{ $food->address }}" width="550" height="220"></iframe>
                         @endif
                     </td>
                 </tr>

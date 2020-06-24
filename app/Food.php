@@ -15,7 +15,7 @@ class Food extends Model
         'comment' => 'required',
     );
 
-public function favorite_users()
+    public function favorite_users()
     {
         return $this->belongsToMany(User::class,'favorites','food_id','user_id')->withTimestamps();
     }
