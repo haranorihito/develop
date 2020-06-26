@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="row top_img">    
-            <img src="{{ $food->image_path }}" width="60%" height="60%">
+            <img src="{{ $food->image_path }}" width="600vw" height="500vw">
         </div>
         <div class="row detail">
             <h2>店舗情報</h2>

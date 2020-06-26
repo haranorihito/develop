@@ -36,14 +36,14 @@
                         <tbody>
                             @foreach($posts as $food)
                                 <tr>
-                                    <th><img src="{{ $food->image_path }}" height="280px"></th>
+                                    <th><img src="{{ $food->image_path }}" height="280vw" width="330vw"></th>
                                     <td>◇店名◇<br>{{ \Str::limit($food->shopname, 100) }}<br><br>◇住所◇<br>{{ \Str::limit($food->address, 100) }}</td>
                                     <td>{{ \Str::limit($food->comment, 250) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ action('Admin\FoodController@detail', ['id' => $food->id]) }}">詳細</a>
+                                            <a href="{{ action('Admin\FoodController@detail', ['id' => $food->id]) }}">詳細<br></a>
                                             @if(Auth::id() == $food->user_id)
-                                                <a href="{{ action('Admin\FoodController@edit', ['id' => $food->id]) }}">編集</a>
+                                                <a href="{{ action('Admin\FoodController@edit', ['id' => $food->id]) }}">編集<br></a>
                                                 <a href="{{ action('Admin\FoodController@delete', ['id' => $food->id]) }}">削除</a>
                                             @endif
                                         </div>
