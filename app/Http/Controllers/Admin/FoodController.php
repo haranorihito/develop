@@ -90,11 +90,11 @@ class FoodController extends Controller
     }
     
     public function update(Request $request){
-        $this->validate($request, Food::rules);
+        $this->validate($request, Food::$rules);
         $food = Food::find($request->id);
-        $news_form = $request->all();
+        $food_form = $request->all();
         if (isset($food_form['image'])) {
-            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $path = Storage::disk('s3')->putFile('/',$food_form['image'],'public');
             $food->image_path = Storage::disk('s3')->url($path);
             unset($food_form['image']);
          } elseif (isset($request->remove)) {
@@ -104,7 +104,7 @@ class FoodController extends Controller
         unset($food_form['_token']);
         $food->fill($food_form)->save();
         
-        return redirect('admin/food/edit');
+        return redirect('admin/food/edit?id=' . $request->id);
     }
     
     public function delete(Request $request){
