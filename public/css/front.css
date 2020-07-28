@@ -142,6 +142,10 @@ header {
   background: linear-gradient(transparent 70%, #fa8072 70%);
 }
 
+.under2 {
+  border-bottom: solid 4px orange;
+}
+
 .box1 {
   padding: 0.5em 1em;
   margin: 2em 0;
@@ -173,6 +177,68 @@ header {
 
 .detail_table td {
   padding: 1em 1em 1em 1em;
+}
+
+.top_second {
+  position: relative;
+  top: 0;
+  right: 50;
+  left: 50;
+  bottom: 0;
+}
+
+.top_second h2 {
+  margin-bottom: 0;
+}
+
+.top_second hr {
+  width: 42vw;
+  height: 1.5px;
+  background-color: gray;
+  margin-top: 0;
+}
+
+.separate hr {
+  width: 42vw;
+  height: 1.5px;
+  margin-top: 0.7vw;
+  border-bottom: dotted 2px gray;
+}
+
+.new_topic h3 {
+  margin-bottom: 1vw;
+}
+
+.new_topic p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.6vw;
+}
+
+.new_topic_text {
+  position: relative;
+}
+
+.new_topic_text h3 {
+  position: absolute;
+  top: 3.5vw;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100;
+  height: 100;
+}
+
+.new_topic_text p {
+  position: absolute;
+  top: 5.5vw;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100;
+  height: 100;
 }
 
 .m-b-md {
